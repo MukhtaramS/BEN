@@ -1,0 +1,12 @@
+{
+  "name": "benazir-group",
+  "version": "1.0.0",
+  "description": "Сайт-визитка Беназир Груп",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
