@@ -1427,8 +1427,8 @@ section.bg-alt {
 ------------------------------ */
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
@@ -1436,21 +1436,92 @@ section.bg-alt {
   transform: translateY(0);
 }
 
+/* Slide from left */
+.reveal.slide-left {
+  transform: translateX(-50px);
+}
+
+.reveal.slide-left.visible {
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.reveal.slide-right {
+  transform: translateX(50px);
+}
+
+.reveal.slide-right.visible {
+  transform: translateX(0);
+}
+
+/* Slide up (default, but more pronounced) */
+.reveal.slide-up {
+  transform: translateY(50px);
+}
+
+.reveal.slide-up.visible {
+  transform: translateY(0);
+}
+
+/* Fade in only */
+.reveal.fade-in {
+  transform: none;
+}
+
+.reveal.fade-in.visible {
+  transform: none;
+}
+
+/* Scale + fade */
+.reveal.scale-in {
+  transform: scale(0.9);
+}
+
+.reveal.scale-in.visible {
+  transform: scale(1);
+}
+
+/* Delay classes */
 .reveal.delay-1 {
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
 }
 
 .reveal.delay-2 {
-  transition-delay: 0.2s;
-}
-
-.reveal.delay-3 {
   transition-delay: 0.3s;
 }
 
-.reveal.delay-4 {
-  transition-delay: 0.4s;
+.reveal.delay-3 {
+  transition-delay: 0.45s;
 }
+
+.reveal.delay-4 {
+  transition-delay: 0.6s;
+}
+
+.reveal.delay-5 {
+  transition-delay: 0.75s;
+}
+
+/* Staggered delays for child elements */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-stagger > *.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.4s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 0.5s; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 0.6s; }
+.reveal-stagger > *:nth-child(7) { transition-delay: 0.7s; }
+.reveal-stagger > *:nth-child(8) { transition-delay: 0.8s; }
 
 /* ------------------------------
    Misc

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Reveal on scroll using IntersectionObserver
-  const revealElements = document.querySelectorAll(".reveal");
+  const revealElements = document.querySelectorAll(".reveal, .reveal-stagger > *");
   if ("IntersectionObserver" in window && revealElements.length > 0) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -80,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.15,
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
