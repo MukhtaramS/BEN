@@ -90,18 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((el) => el.classList.add("visible"));
   }
 
-  // Language switcher placeholder
-  const langButtons = document.querySelectorAll(".lang-btn");
-  langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      langButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      if (btn.dataset.lang === "en") {
-        alert("Английская версия сайта будет доступна позже.");
-      }
-    });
-  });
+  // Language switcher - handled by onclick in HTML
+  // No JavaScript handler needed as we use direct onclick attributes
 
   // Simple contact form handler (no backend)
   const contactForm = document.querySelector("#contact-form");
@@ -111,9 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = new FormData(contactForm);
       const name = (formData.get("name") || "").toString();
 
-      alert(
-        `Спасибо, ${name || "коллега"}! Ваше сообщение отправлено.\nМы свяжемся с вами в ближайшее рабочее время.`
-      );
+      const isEnglish = window.location.pathname.includes('-en.html');
+      const message = isEnglish 
+        ? `Thank you, ${name || "colleague"}! Your message has been sent.\nWe will contact you during the next business hours.`
+        : `Спасибо, ${name || "коллега"}! Ваше сообщение отправлено.\nМы свяжемся с вами в ближайшее рабочее время.`;
+      alert(message);
       contactForm.reset();
     });
   }

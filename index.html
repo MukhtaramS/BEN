@@ -55,7 +55,7 @@
           </div>
           <div class="language-switcher">
             <button class="lang-btn active" type="button" data-lang="ru">RU</button>
-            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="en" onclick="window.location.href='index-en.html'">EN</button>
           </div>
         </nav>
 
@@ -143,159 +143,149 @@
        <!-- Products overview -->
        <section id="products">
         <div class="container">
-          <h2 class="section-title">Наша продукция</h2>
-          <p class="section-subtitle">
-            Полный спектр решений: от мешков для цемента и удобрений до биг-бэгов и полипропиленовой ткани для
-            производителей упаковки.
+          <h2 class="section-title reveal">Наша продукция</h2>
+          <p class="section-subtitle reveal">
+            Полный спектр упаковочных решений из Ирана для промышленности
           </p>
 
-          <div class="grid grid-cols-2-sm grid-cols-3-lg">
-            <article class="card reveal">
-              <div class="card-image-wrapper">
-                <img src="images/adstar.png" alt="AD*STAR мешки" class="card-image" />
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">AD*STAR®</div>
-                  <h3 class="card-title">AD*STAR® Мешки</h3>
+          <!-- Products Grid -->
+          <div class="products-gallery">
+            
+            <!-- Product 1: AD*STAR -->
+            <a href="products.html#adstar" class="product-card reveal">
+              <div class="product-image-wrapper">
+                <img src="images/adstar.png" alt="AD*STAR Мешки" class="product-img" />
+                <div class="product-overlay">
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                Блок-дно мешки премиум-класса на технологии Starlinger. Без клея, влагостойкие, для цемента, удобрений
-                и муки.
-              </p>
-              <div class="card-footer">
-                <a href="products.html#adstar" class="product-link">
-                  Подробнее
-                  <svg viewBox="0 0 20 20" aria-hidden="true">
-                    <path
-                      d="M7.293 4.293a1 1 0 011.414 0L14 9.586 12.586 11 9 7.414 5.414 11 4 9.586l3.293-3.293z"
-                    />
-                  </svg>
-                </a>
+              <div class="product-card-content">
+                <h3 class="product-card-title">AD*STAR® Мешки</h3>
+                <p class="product-card-desc">
+                  Премиум блок-дно мешки. Без клея, влагостойкие.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">10-75 кг</span>
+                  <span class="spec-tag">До 8 цветов</span>
+                  <span class="spec-tag">Без клея</span>
+                </div>
               </div>
-            </article>
+            </a>
 
-            <article class="card reveal delay-1">
-              <div class="card-image-wrapper">
-                <img src="images/pp-bags.png" alt="Полипропиленовые мешки" class="card-image" />
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">Полипропилен</div>
-                  <h3 class="card-title">Полипропиленовые мешки</h3>
+            <!-- Product 2: PP Bags -->
+            <a href="products.html#pp-bags" class="product-card reveal delay-1">
+              <div class="product-image-wrapper">
+                <img src="images/pp-bags.png" alt="Полипропиленовые мешки" class="product-img" />
+                <div class="product-overlay">
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                Тканые ПП мешки для риса, муки, сахара, удобрений и цемента. Ламинированные и стандартные варианты.
-              </p>
-              <div class="card-footer">
-                <a href="products.html#pp-bags" class="product-link">
-                  Подробнее
-                  <svg viewBox="0 0 20 20" aria-hidden="true">
-                    <path
-                      d="M7.293 4.293a1 1 0 011.414 0L14 9.586 12.586 11 9 7.414 5.414 11 4 9.586l3.293-3.293z"
-                    />
-                  </svg>
-                </a>
+              <div class="product-card-content">
+                <h3 class="product-card-title">Полипропиленовые мешки</h3>
+                <p class="product-card-desc">
+                  Тканые ПП мешки для пищевой и промышленной продукции.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">10-100 кг</span>
+                  <span class="spec-tag">УФ-защита</span>
+                  <span class="spec-tag">До 6 цветов</span>
+                </div>
               </div>
-            </article>
+            </a>
 
-            <article class="card reveal delay-2">
-              <div class="card-image-wrapper">
-                <img src="images/fibc.png" alt="Биг-Бэги FIBC" class="card-image" />
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">FIBC</div>
-                  <h3 class="card-title">Биг-Бэги (FIBC)</h3>
+            <!-- Product 3: FIBC -->
+            <a href="products.html#fibc" class="product-card reveal delay-2">
+              <div class="product-image-wrapper">
+                <img src="images/fibc.png" alt="Биг-Бэги" class="product-img" />
+                <div class="product-overlay">
+                  <div class="product-badge">Хит продаж</div>
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                Гибкие контейнеры грузоподъёмностью до 2 тонн. Для стройматериалов, химикатов, минералов и
-                агропродукции.
-              </p>
-              <div class="card-footer">
-                <a href="products.html#fibc" class="product-link">
-                  Подробнее
-                  <svg viewBox="0 0 20 20" aria-hidden="true">
-                    <path
-                      d="M7.293 4.293a1 1 0 011.414 0L14 9.586 12.586 11 9 7.414 5.414 11 4 9.586l3.293-3.293z"
-                    />
-                  </svg>
-                </a>
+              <div class="product-card-content">
+                <h3 class="product-card-title">Биг-Бэги (FIBC)</h3>
+                <p class="product-card-desc">
+                  Гибкие контейнеры до 2 тонн для сыпучих материалов.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">500-2000 кг</span>
+                  <span class="spec-tag">SF 5:1 / 6:1</span>
+                  <span class="spec-tag">Q-bag</span>
+                </div>
               </div>
-            </article>
+            </a>
 
-            <article class="card reveal">
-              <div class="card-image-wrapper">
-                <img src="images/fabric.png" alt="Полипропиленовая ткань" class="card-image" />
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">ПП-ткань</div>
-                  <h3 class="card-title">Полипропиленовая ткань</h3>
+            <!-- Product 4: Fabric -->
+            <a href="products.html#fabric" class="product-card reveal delay-3">
+              <div class="product-image-wrapper">
+                <img src="images/fabric.png" alt="ПП-ткань в рулонах" class="product-img" />
+                <div class="product-overlay">
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                ПП-ткань на технологии Alpha 6. Для производителей упаковки. Ширина 300–850 мм.
-              </p>
-              <div class="card-footer">
-                <a href="products.html#fabric" class="product-link">
-                  Подробнее
-                  <svg viewBox="0 0 20 20" aria-hidden="true">
-                    <path
-                      d="M7.293 4.293a1 1 0 011.414 0L14 9.586 12.586 11 9 7.414 5.414 11 4 9.586l3.293-3.293z"
-                    />
-                  </svg>
-                </a>
+              <div class="product-card-content">
+                <h3 class="product-card-title">ПП-ткань в рулонах</h3>
+                <p class="product-card-desc">
+                  ПП-ткань Alpha 6 для производителей упаковки.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">300-850 мм</span>
+                  <span class="spec-tag">Alpha 6</span>
+                  <span class="spec-tag">ПП/ПЭВД</span>
+                </div>
               </div>
-            </article>
+            </a>
 
-            <article class="card reveal delay-1">
-              <div class="card-image-wrapper">
-                <img src="images/yarn.png" alt="Полипропиленовая пряжа" class="card-image" />
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">Пряжа</div>
-                  <h3 class="card-title">Полипропиленовая пряжа</h3>
+            <!-- Product 5: Yarn -->
+            <a href="products.html#yarn" class="product-card reveal delay-4">
+              <div class="product-image-wrapper">
+                <img src="images/yarn.png" alt="Полипропиленовая пряжа" class="product-img" />
+                <div class="product-overlay">
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                Полипропиленовая пряжа кольцевого прядения. Производство на собственной фабрике с 2006 года.
-              </p>
-              <div class="card-footer">
-                <a href="products.html#yarn" class="product-link">
-                  Подробнее
-                  <svg viewBox="0 0 20 20" aria-hidden="true">
-                    <path
-                      d="M7.293 4.293a1 1 0 011.414 0L14 9.586 12.586 11 9 7.414 5.414 11 4 9.586l3.293-3.293z"
-                    />
-                  </svg>
-                </a>
+              <div class="product-card-content">
+                <h3 class="product-card-title">Полипропиленовая пряжа</h3>
+                <p class="product-card-desc">
+                  Пряжа кольцевого прядения для промышленности.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">100% ПП</span>
+                  <span class="spec-tag">Кольцевое прядение</span>
+                  <span class="spec-tag">Конусы/бобины</span>
+                </div>
               </div>
-            </article>
+            </a>
 
-            <article class="card reveal delay-2">
-              <div class="card-image-wrapper card-image-placeholder">
-                <div class="placeholder-icon">+</div>
-                <span class="placeholder-text">Скоро</span>
-              </div>
-              <div class="card-header">
-                <div>
-                  <div class="product-tag">Новый продукт</div>
-                  <h3 class="card-title">Скоро в линейке</h3>
+            <!-- Product 6: New Product -->
+            <a href="products.html#new-product" class="product-card reveal delay-5">
+              <div class="product-image-wrapper">
+                <img src="images/fabric.png" alt="Новый продукт" class="product-img" />
+                <div class="product-overlay">
+                  <div class="product-badge new">Скоро</div>
+                  <span class="product-view-btn">Подробнее →</span>
                 </div>
               </div>
-              <p class="card-body">
-                Разрабатываем новое упаковочное решение. Следите за обновлениями — подробности появятся здесь.
-              </p>
-              <div class="card-footer">
-                <span class="badge-new">Скоро</span>
+              <div class="product-card-content">
+                <h3 class="product-card-title">Новый продукт</h3>
+                <p class="product-card-desc">
+                  Расширение линейки продукции. Скоро в продаже.
+                </p>
+                <div class="product-specs-mini">
+                  <span class="spec-tag">В разработке</span>
+                </div>
               </div>
-            </article>
+            </a>
+
           </div>
+
+          <!-- CTA Button -->
+          <div class="products-cta reveal">
+            <a href="products.html" class="btn btn-primary btn-large">
+              Смотреть все продукты →
+            </a>
+          </div>
+
         </div>
       </section>
 
