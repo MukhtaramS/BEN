@@ -94,7 +94,7 @@
               </div>
               <div>
                 <div class="contact-label">Email</div>
-                <a href="mailto:info@benazirgroup.com">info@benazirgroup.com</a>
+                <a href="mailto:benazirpackgroup@gmail.com">benazirpackgroup@gmail.com</a>
               </div>
               <div>
                 <div class="contact-label">WhatsApp</div>
@@ -179,7 +179,7 @@
             <h3 class="footer-title">Contacts</h3>
             <div class="footer-text">
               <p>📞 Phone: <a href="tel:+992880180101">+992 88 018 01 01</a></p>
-              <p>📧 Email: info@benazirgroup.com</p>
+              <p>📧 Email: benazirpackgroup@gmail.com</p>
               <p>🌐 Website: www.benazirgroup.com</p>
             </div>
           </div>
@@ -236,6 +236,17 @@
     </button>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Wait for EmailJS to load before initializing
+      window.addEventListener('load', function() {
+        if (typeof emailjs !== 'undefined') {
+          console.log('EmailJS loaded successfully');
+        } else {
+          console.error('EmailJS failed to load');
+        }
+      });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -33,6 +33,223 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+      /* Photo Carousel Styles */
+      .photo-carousel-section {
+        padding: 4rem 0;
+        background: var(--color-bg-alt);
+        overflow: hidden;
+      }
+
+      .photo-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 2rem 0;
+        overflow: hidden;
+      }
+
+      .photo-carousel {
+        display: flex;
+        gap: 1.5rem;
+        animation: scroll var(--animation-duration, 30s) linear infinite;
+        will-change: transform;
+        width: fit-content;
+      }
+
+      .photo-carousel:hover {
+        animation-play-state: paused;
+      }
+
+      .photo-carousel-item {
+        flex: 0 0 auto;
+        width: 300px;
+        height: 300px;
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .photo-carousel-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .photo-carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Testimonials Styles */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .testimonial-card {
+        background: #ffffff;
+        border-radius: var(--radius-card);
+        padding: 2rem;
+        box-shadow: var(--shadow-soft);
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .testimonial-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        background: var(--color-bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--color-primary);
+        flex-shrink: 0;
+      }
+
+      .testimonial-company {
+        flex: 1;
+      }
+
+      .testimonial-company-name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        margin: 0 0 0.25rem 0;
+      }
+
+      .testimonial-company-location {
+        font-size: 0.875rem;
+        color: var(--color-muted);
+        margin: 0;
+      }
+
+      .testimonial-text {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        color: var(--color-text);
+        margin: 0 0 1.5rem 0;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .testimonial-author-name {
+        font-weight: 600;
+        color: var(--color-primary-dark);
+        font-size: 0.9375rem;
+      }
+
+      .testimonial-author-role {
+        font-size: 0.875rem;
+        color: var(--color-muted);
+      }
+
+      /* Video Section Styles */
+      .video-section {
+        padding: 4rem 0;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .video-placeholder {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        background: var(--color-bg-alt);
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        border: 2px dashed #d1d5db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .video-placeholder:hover {
+        border-color: var(--color-primary);
+        background: #f3f4f6;
+      }
+
+      .video-placeholder video,
+      .video-placeholder iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--radius-card);
+      }
+
+      .video-placeholder-text {
+        position: absolute;
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        text-align: center;
+        padding: 1rem;
+        z-index: 1;
+      }
+
+      .video-placeholder.has-content .video-placeholder-text {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .photo-carousel-item {
+          width: 250px;
+          height: 250px;
+        }
+
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -329,6 +546,17 @@
                   </div>
                 </div>
               </div>
+              <div class="about-feature">
+                <div class="about-feature-icon">🏭</div>
+                <div class="about-feature-content">
+                  <h3 class="about-feature-title">Ipak Negaar Puya (IpakNP)</h3>
+                  <p class="about-feature-text">
+                    Our strategic partner, combining the production of high-quality big bags. IpakNP uses advanced machinery and technology to produce durable and competitive packaging.
+                  </p>
+                </div>
+              </div>
+              
+              </div>
             </div>
           </div>
         </div>
@@ -396,6 +624,205 @@
               🤝 <strong>Regular deliveries for over 15 years</strong><br>
               Complete documentation, timely delivery, flexible cooperation terms
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Carousel -->
+      <section class="photo-carousel-section">
+        <div class="container">
+          <h2 class="section-title reveal slide-up">Our Gallery</h2>
+          <div class="photo-carousel-wrapper reveal slide-up delay-1">
+            <div class="photo-carousel">
+              <!-- Add your photos here -->
+              <!-- Simply add new elements with class photo-carousel-item -->
+              <div class="photo-carousel-item">
+                <img src="images/adstar.png" alt="Photo 1" />
+              </div>
+              <div class="photo-carousel-item">
+                <img src="images/pp-bags.png" alt="Photo 2" />
+              </div>
+              <div class="photo-carousel-item">
+                <img src="images/fibc.png" alt="Photo 3" />
+              </div>
+              <div class="photo-carousel-item">
+                <img src="images/fabric.png" alt="Photo 4" />
+              </div>
+              <div class="photo-carousel-item">
+                <img src="images/yarn.png" alt="Photo 5" />
+              </div>
+              <!-- Add more photos here, just copy the photo-carousel-item block -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials">
+        <div class="container">
+          <h2 class="section-title reveal slide-up">Partner Testimonials</h2>
+          <p class="section-subtitle reveal slide-up delay-1">
+            What our partners and clients say about us
+          </p>
+
+          <div class="testimonials-grid reveal-stagger">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">KG</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Kabir Industrial Group</h3>
+                  <p class="testimonial-company-location">📍 Iran</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Benazir Group is a reliable partner in industrial packaging supply. Thanks to their professionalism and direct access to production lines, we ensure stable product quality for our clients worldwide."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Company Management</div>
+                  <div class="testimonial-author-role">Strategic Partner</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">IN</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Ipak Negaar Puya</h3>
+                  <p class="testimonial-company-location">📍 Iran</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Cooperation with Benazir Group allows us to effectively promote our products on international markets. The team always promptly resolves issues and ensures a high level of service."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Production Department</div>
+                  <div class="testimonial-author-role">Big Bag Manufacturer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">HC</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Huaxin Gayur Cement LLC</h3>
+                  <p class="testimonial-company-location">📍 Tajikistan</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "We have been working with Benazir Group for several years. Bag quality is stable, deliveries are timely, and prices are competitive. We recommend them as a reliable industrial packaging supplier."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Procurement Department</div>
+                  <div class="testimonial-author-role">Largest Cement Plant in the Region</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">TC</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Tajik Cement (Точикцемент)</h3>
+                  <p class="testimonial-company-location">📍 Tajikistan</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Benazir Group provides us with quality cement packaging. We especially appreciate their flexibility in work and willingness to adapt to our needs. Excellent service and professional approach."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Technical Department</div>
+                  <div class="testimonial-author-role">State Enterprise</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">SC</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Southern Construction Materials Combine</h3>
+                  <p class="testimonial-company-location">📍 Kyrgyzstan</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Long-term cooperation with Benazir Group demonstrates their reliability and professionalism. Consistent product quality and efficient logistics allow us to plan production without disruptions."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Supply Department</div>
+                  <div class="testimonial-author-role">Construction Materials Manufacturer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-logo">TT</div>
+                <div class="testimonial-company">
+                  <h3 class="testimonial-company-name">Terek-Tash Cement LLC</h3>
+                  <p class="testimonial-company-location">📍 Kyrgyzstan</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Benazir Group is our trusted partner for cement packaging supplies. High bag quality, adherence to delivery schedules, and individual approach to each order — that's what distinguishes this company."
+              </p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Procurement Department</div>
+                  <div class="testimonial-author-role">Cement Plant in Chui Region</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="video-section bg-alt">
+        <div class="container">
+          <h2 class="section-title reveal slide-up">Videos About Our Products</h2>
+          <p class="section-subtitle reveal slide-up delay-1">
+            Watch videos about the production and use of our products
+          </p>
+
+          <div class="video-grid reveal-stagger">
+            <!-- Video Placeholder 1 -->
+            <div class="video-placeholder">
+              <div class="video-placeholder-text">
+                Add your video here<br>
+                (use &lt;video&gt; or &lt;iframe&gt; tag)
+              </div>
+              <!-- Example: <video controls><source src="videos/video1.mp4" type="video/mp4"></video> -->
+              <!-- Or: <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+            </div>
+
+            <!-- Video Placeholder 2 -->
+            <div class="video-placeholder">
+              <div class="video-placeholder-text">
+                Add your video here<br>
+                (use &lt;video&gt; or &lt;iframe&gt; tag)
+              </div>
+            </div>
+
+            <!-- Video Placeholder 3 -->
+            <div class="video-placeholder">
+              <div class="video-placeholder-text">
+                Add your video here<br>
+                (use &lt;video&gt; or &lt;iframe&gt; tag)
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -537,5 +964,38 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
+    <script>
+      // Infinite photo carousel
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.photo-carousel');
+        if (carousel) {
+          // Clone all items for seamless infinite loop
+          const items = carousel.querySelectorAll('.photo-carousel-item');
+          const itemWidth = 300; // px
+          const gap = 24; // 1.5rem = 24px
+          
+          // Clone all items to create seamless loop
+          items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.appendChild(clone);
+          });
+
+          // Calculate animation duration based on number of items
+          // Adjust speed: more items = longer duration
+          const totalItems = items.length;
+          const animationDuration = Math.max(20, totalItems * 3); // Minimum 20s, 3s per item
+          carousel.style.setProperty('--animation-duration', animationDuration + 's');
+        }
+
+        // Auto-hide video placeholder text when content is added
+        const videoPlaceholders = document.querySelectorAll('.video-placeholder');
+        videoPlaceholders.forEach(placeholder => {
+          const hasVideo = placeholder.querySelector('video, iframe');
+          if (hasVideo) {
+            placeholder.classList.add('has-content');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
