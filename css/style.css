@@ -2580,3 +2580,59 @@ body {
 .scroll-top-btn:hover {
   background-color: var(--color-accent);
 }
+/* --- Hero wider left column --- */
+
+
+/* --- Products page refinements --- */
+.sub-hero {
+  padding: 5rem 0 3rem;
+}
+
+.sub-hero-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .sub-hero-title {
+    font-size: 3rem;
+  }
+}
+
+.product-section-title {
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+}
+
+.product-image-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 40, 80, 0.08);
+}
+
+.product-image-caption {
+  font-size: 0.82rem;
+  border-top: 1px solid rgba(20, 40, 80, 0.06);
+}
+
+.spec-item {
+  border-left-color: var(--color-accent);
+}
+
+.product-block-title {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  margin-top: 1.5rem;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff;
+}
+@media (min-width: 901px) {
+  .hero-inner {
+    grid-template-columns: 1.8fr 1fr;
+    gap: 3rem;
+  }
+}
