@@ -414,7 +414,7 @@ section.bg-alt {
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
   gap: 4rem;
   align-items: center;
-  padding: 5rem 0 5.5rem;
+  padding: 4.4rem 0 5.5rem;
   position: relative;
   z-index: 1;
 }
@@ -2632,7 +2632,84 @@ body {
 }
 @media (min-width: 901px) {
   .hero-inner {
-    grid-template-columns: 1.8fr 1fr;
+    grid-template-columns: 1.82fr 1fr;
     gap: 3rem;
   }
+}
+/* --- Header refinement --- */
+.header-inner {
+  padding: 0 2rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.logo-text-main {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+}
+
+.logo-text-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(20, 40, 80, 0.05);
+}
+
+.nav-link::after {
+  display: none;
+}
+
+.nav-link.active {
+  background: rgba(212, 98, 43, 0.08);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.lang-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+}
+
+.lang-btn.active {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(212, 98, 43, 0.2);
+}
+
+.language-switcher {
+  padding: 0.15rem;
+  background: rgba(20, 40, 80, 0.03);
+  border-radius: 999px;
+  border: 1px solid rgba(20, 40, 80, 0.06);
+  margin-left: 0.75rem;
+  padding-left: 0.15rem;
+  border-left: 1px solid rgba(20, 40, 80, 0.06);
+}
+
+.site-header {
+  border-bottom: none;
+  box-shadow: 0 1px 0 rgba(20, 40, 80, 0.04);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.06);
 }
